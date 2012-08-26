@@ -178,3 +178,25 @@ input, textarea, select, .uneditable-input {
 .pagination a {
   line-height: 20px;
 }
+
+/* Links List */
+
+.links-list {
+  list-style: none;
+  margin-left: 0px;
+  li {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grayMediumLight;
+  }
+}
+
+.links-title {
+ font-size: 150%;
+ line-height: 150%;
+}
+
+.links-date {
+  font-weight: bold;
+  color: $grayLight;
+}

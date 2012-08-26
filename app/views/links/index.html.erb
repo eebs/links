@@ -1,14 +1,22 @@
-<h1>Listing links</h1>
+<h2>Listing links</h2>
 
-<ul>
-  <% @links.each do |link| %>
-  <li>
-    <span><%= link.created_at.strftime('%b %d') %> -
-      <%= link_to (link.title? ? link.title : link.url), link.url %>
-    </span>
+<div class="row">
+  <div class="span10 offset1">
+    <ul class='links-list'>
+      <% @links.each do |link| %>
+      <li>
+        <span class='links-date'><%= link.created_at.strftime('%b %d') %></span>
+        <div class="links-block">
+          <div class='links-title'><%= link_to (link.title? ? link.title : link.url), link.url %></div>
+          <% if link.description? %>
+          <div class="links-desc"><%= link.description %></div>
+          <% end %>
+        </div>
 
-  </li>
-  <% end %>
-</ul>
+      </li>
+      <% end %>
+    </ul>
 
-<%= link_to 'New Link', new_link_path %>
+    <%= link_to 'New Link', new_link_path, :class => 'btn btn-primary'%>
+  </div>
+</div>
