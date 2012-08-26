@@ -1,7 +1,7 @@
-<h2>Listing links</h2>
-
 <div class="row">
   <div class="span10 offset1">
+    <%= render 'form-horizontal' %>
+    <div id="links-seperator"></div>
     <ul class='links-list'>
       <% @links.each do |link| %>
       <li>
@@ -17,6 +17,5 @@
       <% end %>
     </ul>
 
-    <%= link_to 'New Link', new_link_path, :class => 'btn btn-primary'%>
   </div>
 </div>

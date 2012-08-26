@@ -1,5 +1,10 @@
-<h1>New link</h1>
+<% provide(:title, 'New Link') %>
+<div class="row">
+  <div class="span10 offset1">
+    <div id="new-link-form">
+      <%= render 'form' %>
+    </div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', links_path %>
+    <%= link_to 'Back', links_path %>
+  </div>
+</div>

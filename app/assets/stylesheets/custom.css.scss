@@ -128,11 +128,21 @@ footer {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  width: 620px;
   padding: 10px;
   height: auto;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+#new-link-form {
+  input, textarea, select, .uneditable-input {
+    width: 100%;
+  }
+  input[type="button"], input[type="reset"], input[type="submit"] {
+    width: auto;
+    height: auto;
+  }
 }
 
 #error_explanation {
@@ -146,7 +156,20 @@ input, textarea, select, .uneditable-input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
- }
+}
+
+.form-horizontal .field_with_errors:before {
+  display: inline;
+}
+
+.form-horizontal .control-label {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.create-link {
+  margin-left: 80px;
+}
 
 /* Home page */
 
@@ -198,4 +221,9 @@ input, textarea, select, .uneditable-input {
 .links-date {
   font-weight: bold;
   color: $grayLight;
+}
+
+#links-seperator {
+  border-bottom: 1px solid $grayLight;
+  margin-bottom: 40px;
 }

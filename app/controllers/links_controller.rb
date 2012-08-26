@@ -4,6 +4,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
+    @link = Link.new
     @links = Link.all.reverse
 
     respond_to do |format|
@@ -50,7 +51,7 @@ class LinksController < ApplicationController
           @link.title = Nokogiri::HTML(open @link.url).title
         end
         if @link.save
-          format.html { redirect_to @link, notice: 'Link was successfully created.' }
+          format.html { redirect_to root_path, notice: 'Link was successfully created.' }
           format.json { render json: @link, status: :created, location: @link }
         end
       else
