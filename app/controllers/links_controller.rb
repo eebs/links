@@ -5,7 +5,7 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @link = Link.new
-    @links = Link.all.reverse
+    @links = Link.order('created_at DESC').page(params[:page]).per_page(6)
 
     respond_to do |format|
       format.html # index.html.erb

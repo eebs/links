@@ -2,20 +2,8 @@
   <div class="span10 offset1">
     <%= render 'form-horizontal' %>
     <div id="links-seperator"></div>
-    <ul class='links-list'>
-      <% @links.each do |link| %>
-      <li>
-        <span class='links-date'><%= link.created_at.strftime('%b %d') %></span>
-        <div class="links-block">
-          <div class='links-title'><%= link_to (link.title? ? link.title : link.url), link.url, :target => '_blank' %></div>
-          <% if link.description? %>
-          <div class="links-desc"><%= link.description %></div>
-          <% end %>
-        </div>
-
-      </li>
-      <% end %>
-    </ul>
-
+    <%= will_paginate :class => 'pagination post_pagination' %>
+    <%= render 'links/links' %>
+    <%= will_paginate :class => 'pagination post_pagination' %>
   </div>
 </div>
