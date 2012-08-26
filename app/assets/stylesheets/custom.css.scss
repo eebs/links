@@ -149,12 +149,6 @@ input, textarea, select, .uneditable-input {
   @extend .error;
  }
 
-/* About page */
-
-.about_page h3{
-  margin-bottom: 10px;
-}
-
 /* Home page */
 
 .recent_updates {
@@ -183,31 +177,4 @@ input, textarea, select, .uneditable-input {
 
 .pagination a {
   line-height: 20px;
-}
-
-/* Blog Posts */
-
-.post_dl div {
-    border-bottom: 1px solid $grayMediumLight;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-
-.post_dl dt{
-    width: 180px;
-    line-height: 120%;
-    font-size: 150%;
-}
-
-.post_dl dd {
-    margin-left: 200px;
-}
-
-.post_dl dt span {
-    font-size: 60%;
-    font-weight: 100;
-}
-
-.post_dl p {
-    line-height: 1.4em;
 }
