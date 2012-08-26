@@ -1,4 +1,11 @@
 Links::Application.routes.draw do
+
+  get "static_pages/home"
+
+  root to: 'links#index'
+
+  resources :links
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

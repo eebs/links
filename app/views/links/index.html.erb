@@ -1,0 +1,14 @@
+<h1>Listing links</h1>
+
+<ul>
+  <% @links.each do |link| %>
+  <li>
+    <span><%= link.created_at.strftime('%b %d') %> -
+      <%= link_to (link.title? ? link.title : link.url), link.url %>
+    </span>
+
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Link', new_link_path %>
