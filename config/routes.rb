@@ -1,5 +1,7 @@
 Links::Application.routes.draw do
 
+  devise_for :users
+
   get "static_pages/home"
 
   root to: 'links#index'
