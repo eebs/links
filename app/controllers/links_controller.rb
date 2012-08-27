@@ -13,6 +13,15 @@ class LinksController < ApplicationController
     end
   end
 
+  def mylinks
+    @links = Link.where(:user_id => current_user.id).order('created_at DESC').page(params[:pgae]).per_page(10)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @links }
+    end
+  end
+
   # GET /links/1
   # GET /links/1.json
   def show
@@ -44,6 +53,7 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = Link.new(params[:link])
+    @link.user = current_user
 
     respond_to do |format|
       if @link.save

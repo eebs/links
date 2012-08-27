@@ -10,13 +10,13 @@
               <a href="#"
                     class="dropdown-toggle"
                     data-toggle="dropdown">
-                    My Account (<%= current_user.name %>)
+                    My Account (<%= current_user.displayname? ? current_user.displayname : current_user.email %>)
                     <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li class="nav-header">Account</li>
                 <li><a href="<%= edit_user_registration_url %>"><i class=" icon-user"></i> Profile</a>
-                <li><a href="#"><i class=" icon-cog"></i> Settings</a>
+                <li><a href="<%= users_links_url %>"><i class=" icon-list"></i> My Links</a>
                 <li class="divider"></li>
                 <li><%= link_to "Sign Out",  destroy_user_session_path, method: :delete %></li>
               </ul>

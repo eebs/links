@@ -1,12 +1,12 @@
 Links::Application.routes.draw do
 
-  devise_for :users
-
-  get "static_pages/home"
-
   root to: 'links#index'
 
+  devise_for :users
+
   resources :links
+
+  get '/users/links', to: 'links#mylinks'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

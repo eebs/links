@@ -207,9 +207,12 @@ input, textarea, select, .uneditable-input {
   list-style: none;
   margin-left: 0px;
   li {
-    margin-bottom: 30px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid $grayMediumLight;
+    &:last-child{
+      border-bottom: none;
+    }
   }
 }
 
@@ -220,6 +223,10 @@ input, textarea, select, .uneditable-input {
 
 .links-date {
   font-weight: bold;
+  color: $grayLight;
+}
+
+.links-author {
   color: $grayLight;
 }
 

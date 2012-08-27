@@ -1,0 +1,8 @@
+<% if @link.errors.any? %>
+    <% @link.errors.full_messages.each do |msg| %>
+    <div class="alert alert-error">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= content_tag :div, msg if msg.is_a?(String) %>
+    </div>
+    <% end %>
+<% end %>

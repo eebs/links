@@ -1,7 +1,12 @@
 <ul class='links-list'>
   <% @links.each do |link| %>
   <li>
-    <span class='links-date'><%= link.created_at.strftime('%b %d') %></span>
+    <span class='links-date' title="<%= link.created_at.to_s(:long_ordinal) %>"><%= link.created_at.strftime('%b %d') %></span>
+    <% if link.user && link.user.displayname? %>
+      <span class="links-author">
+        - by <%= link.user.displayname %>
+      </span>
+    <% end %>
     <div class="links-block">
       <div class='links-title'><%= link_to (link.title? ? link.title : link.url), link.url, :target => '_blank' %></div>
       <% if link.description? %>
