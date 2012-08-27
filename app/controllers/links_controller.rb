@@ -1,9 +1,12 @@
 require 'open-uri'
 
 class LinksController < ApplicationController
+  load_and_authorize_resource
+
   # GET /links
   # GET /links.json
   def index
+    show_anon_message unless user_signed_in?
     @link = Link.new
     @links = Link.order('created_at DESC').page(params[:page]).per_page(5)
 
@@ -99,4 +102,9 @@ class LinksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  protected
+    def show_anon_message
+      flash.now[:info] = "Note: You won't be able to edit or delete links you post while not logged in."
+    end
 end
