@@ -10,6 +10,7 @@ class LinksController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @links }
+      format.atom { render :layout => false}
     end
   end
 
