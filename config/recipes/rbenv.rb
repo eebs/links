@@ -17,6 +17,7 @@ BASHRC
     put bashrc, "/tmp/rbenvrc"
     run "cat /tmp/rbenvrc ~/.bashrc > ~/.bashrc.tmp"
     run "mv ~/.bashrc.tmp ~/.bashrc"
+    run %q{export RBENV_ROOT="${HOME}/.rbenv"}
     run %q{export PATH="${RBENV_ROOT}/bin:${PATH}"}
     run %q{eval "$(rbenv init -)"}
     run "rbenv #{rbenv_bootstrap}"
