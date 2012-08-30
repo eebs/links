@@ -8,8 +8,10 @@ gem 'cancan'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'mongrel', '1.2.0.pre2'
+group :development do
+    gem 'sqlite3'
+    gem 'mongrel', '1.2.0.pre2'
+end
 
 
 # Gems used only for assets and not required
@@ -28,6 +30,7 @@ gem 'jquery-rails'
 gem 'nokogiri'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'pg'
 
 # Suppress asset info logging
 gem 'quiet_assets', group: :development
