@@ -15,8 +15,7 @@ BASHRC
     put bashrc, "/tmp/rbenvrc"
     run "cat /tmp/rbenvrc ~/.bashrc > ~/.bashrc.tmp"
     run "mv ~/.bashrc.tmp ~/.bashrc"
-    run %q{export PATH="$HOME/.rbenv/bin:$PATH"}
-    run %q{eval "$(rbenv init -)"}
+    run ". ~/.bashrc"
     run "rbenv #{rbenv_bootstrap}"
     run "rbenv install #{ruby_version}"
     run "rbenv global #{ruby_version}"
