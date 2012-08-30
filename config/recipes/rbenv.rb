@@ -16,7 +16,7 @@ BASHRC
     run "cat /tmp/rbenvrc ~/.bashrc > ~/.bashrc.tmp"
     run "mv ~/.bashrc.tmp ~/.bashrc"
     run "source ~/.bashrc", shell: '/bin/bash'
-    run "rbenv #{rbenv_bootstrap}"
+    run "#{sudo} rbenv #{rbenv_bootstrap}"
     run "rbenv install #{ruby_version}"
     run "rbenv global #{ruby_version}"
     run "gem install bundler --no-ri --no-rdoc"
