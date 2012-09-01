@@ -16,7 +16,8 @@ BASHRC
     run "cat /tmp/rbenvrc ~/.bashrc > ~/.bashrc.tmp"
     run "mv ~/.bashrc.tmp ~/.bashrc"
     run "source ~/.bashrc", shell: '/bin/bash'
-    run "#{sudo} rbenv #{rbenv_bootstrap}"
+    # Manually bootstrap
+    run "#{sudo} apt-get -y install build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev"
     run "rbenv install #{ruby_version}"
     run "rbenv global #{ruby_version}"
     run "gem install bundler --no-ri --no-rdoc"
