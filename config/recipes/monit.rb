@@ -1,4 +1,5 @@
 set_default(:monithttp_password) { Capistrano::CLI.password_prompt "Monit HTTP Password: " }
+set_default(:gmail_alert_password) { Capistrano::CLI.password_prompt "Gmail Alert Password: " }
 
 namespace :monit do
   desc "Install Monit"

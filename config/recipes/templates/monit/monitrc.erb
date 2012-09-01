@@ -8,12 +8,12 @@ set eventqueue
     basedir /var/lib/monit/events
     slots 100
 
-# set mailserver smtp.gmail.com port 587
-#     username "foo@example.com" password "secret"
-#     using tlsv1
-#     with timeout 30 seconds
+set mailserver smtp.gmail.com port 587
+    username "lifeismusic434@gmail.com" password "<%= gmail_alter_password %>"
+    using tlsv1
+    with timeout 30 seconds
 
-#set alert foo@example.com
+set alert lifeismusic434@gmail.com
 
 set httpd port 2812
     allow admin:"<%= monithttp_password %>"
