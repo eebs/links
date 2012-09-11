@@ -8,7 +8,11 @@ class LinksController < ApplicationController
   def index
     show_anon_message unless user_signed_in?
     @link = Link.new
-    @links = Link.order('created_at DESC').page(params[:page]).per_page(5)
+    if not params[:user_id]
+      @links = Link.order('created_at DESC').page(params[:page]).per_page(5)
+    else
+      @links = Link.where(:user_id => params[:user_id]).order('created_at DESC').page(params[:page]).per_page(5)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -18,7 +22,7 @@ class LinksController < ApplicationController
   end
 
   def mylinks
-    @links = Link.where(:user_id => current_user.id).order('created_at DESC').page(params[:pgae]).per_page(10)
+    @links = Link.where(:user_id => current_user.id).order('created_at DESC').page(params[:page]).per_page(10)
 
     respond_to do |format|
       format.html # index.html.erb
