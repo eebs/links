@@ -2,6 +2,7 @@ require 'open-uri'
 
 class LinksController < ApplicationController
   load_and_authorize_resource
+  before_filter :require_login, :only => :mylinks
 
   # GET /links
   # GET /links.json
@@ -110,5 +111,11 @@ class LinksController < ApplicationController
   protected
     def show_anon_message
       flash.now[:info] = "Note: You won't be able to edit or delete links you post while not logged in."
+    end
+
+    def require_login
+      unless current_user
+        redirect_to root_url, alert: 'You must be logged in to do that.'
+      end
     end
 end
