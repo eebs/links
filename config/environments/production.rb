@@ -67,4 +67,6 @@ Links::Application.configure do
 
   #Devise needs this
   config.action_mailer.default_url_options = { :host => 'links.eebsy.com'}
+
+  GA.tracker = 'UA-34740995-1'
 end

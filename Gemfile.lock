@@ -58,6 +58,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     gem_plugin (0.2.3)
+    google-analytics-rails (0.0.3)
     highline (1.6.14)
     hike (1.2.1)
     i18n (0.6.0)
@@ -152,6 +153,7 @@ DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.1)
   devise
+  google-analytics-rails
   jquery-rails
   mongrel (= 1.2.0.pre2)
   nokogiri
