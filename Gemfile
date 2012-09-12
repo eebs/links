@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 gem 'devise'
 gem 'cancan'
 gem 'google-analytics-rails'
