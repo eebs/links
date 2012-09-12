@@ -4,6 +4,7 @@ gem 'rails', '3.2.3'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'cancan'
+gem 'google-analytics-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
