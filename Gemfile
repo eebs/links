@@ -50,3 +50,5 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'acts-as-taggable-on', '~> 2.3.1'
