@@ -7,4 +7,8 @@ class TagsController < ApplicationController
             format.json { render json: @tags }
         end
     end
+
+    def index
+        @tags = Link.tag_counts
+    end
 end
