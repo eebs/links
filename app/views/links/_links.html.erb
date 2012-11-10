@@ -12,7 +12,7 @@
       <% if link.description? %>
       <div class="links-desc"><%= link.description %></div>
       <% end %>
-      <% if link.tags %>
+      <% unless link.tags.empty? %>
       <div class="tag-list">
         <% link.tags.each do |t| %>
           <span class="tag"><%= t.name %></span>
