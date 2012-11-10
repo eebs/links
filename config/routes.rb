@@ -8,6 +8,8 @@ Links::Application.routes.draw do
 
   get '/users/links', to: 'links#mylinks'
 
+  get '/tags/:name', to: 'tags#show', :as => :tag
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

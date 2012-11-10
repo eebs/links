@@ -247,4 +247,7 @@ input, textarea, select, .uneditable-input {
   padding: 0px 3px;
   background-color: #C3E9FF;
   margin: 0px 1px;
+  &:hover{
+    background-color: #98D8FE;
+  }
 }

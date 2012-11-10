@@ -15,7 +15,7 @@
       <% unless link.tags.empty? %>
       <div class="tag-list">
         <% link.tags.each do |t| %>
-          <span class="tag"><%= t.name %></span>
+          <a href="<%= tag_url t.name %>"><span class="tag"><%= t.name %></span></a>
         <% end %>
       </div>
       <% end %>

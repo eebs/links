@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="span10 offset1">
+    <h2>Links tagged with "<%= @name %>"</h2>
+    <%= will_paginate @links, :class => 'pagination post_pagination' %>
+    <%= render 'links/links' %>
+    <%= will_paginate @links, :class => 'pagination post_pagination' %>
+  </div>
+</div>
