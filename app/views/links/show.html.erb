@@ -11,6 +11,13 @@
       <% if @link.description? %>
       <div class="links-desc"><%= @link.description %></div>
       <% end %>
+      <% unless @link.tags.empty? %>
+      <div class="tag-list">
+        <% @link.tags.each do |t| %>
+          <a href="<%= tag_url t.name %>"><span class="tag"><%= t.name %></span></a>
+        <% end %>
+      </div>
+      <% end %>
     </div>
 
   </li>

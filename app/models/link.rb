@@ -12,6 +12,6 @@ class Link < ActiveRecord::Base
 
   acts_as_taggable
 
-  attr_accessible :description, :title, :url
+  attr_accessible :description, :title, :url, :tag_list
   validates_with URIValidator, :fields => [:url]
 end
