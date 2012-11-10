@@ -9,6 +9,9 @@ end
 
 class Link < ActiveRecord::Base
   belongs_to :user
+
+  acts_as_taggable
+
   attr_accessible :description, :title, :url
   validates_with URIValidator, :fields => [:url]
 end

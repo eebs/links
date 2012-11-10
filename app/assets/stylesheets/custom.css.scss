@@ -234,3 +234,17 @@ input, textarea, select, .uneditable-input {
   border-bottom: 1px solid $grayLight;
   margin-bottom: 10px;
 }
+
+/* Tags */
+
+.tag-list {
+  margin: 4px 0px;
+}
+
+.tag {
+  border: 1px solid #98D8FE;
+  border-radius: 4px;
+  padding: 0px 3px;
+  background-color: #C3E9FF;
+  margin: 0px 1px;
+}

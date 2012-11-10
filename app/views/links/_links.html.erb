@@ -12,6 +12,11 @@
       <% if link.description? %>
       <div class="links-desc"><%= link.description %></div>
       <% end %>
+      <div class="tag-list">
+        <% link.tags.each do |t| %>
+          <span class="tag"><%= t.name %></span>
+        <% end %>
+      </div>
       <% if can? :manage, link %>
         <span class="manage-links"><%= link_to 'Edit', edit_link_path(link) %> | <%= link_to 'Delete', link, :method => :delete, :confirm => "Are you sure?" %></span>
       <% end %>
